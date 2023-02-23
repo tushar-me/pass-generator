@@ -1,7 +1,7 @@
 <?php
     $password = "";
-    if($_SERVER["REQUEST_METHOD"] == "POST"){ // jodi post method e submit kora hoy tahole
-        $password_length = 20;
+    if($_SERVER["REQUEST_METHOD"] == "POST"){ 
+        $password_length = $password_length = isset( $_POST['length'] ) ? $_POST['length'] : 10;
         $add_special_characters = isset($_POST['Special_Character']);
         $add_numbers = isset($_POST["Number"]);
         $available_characters ="QWERTYUIOPLKJhgfdsazxcvbnm";
